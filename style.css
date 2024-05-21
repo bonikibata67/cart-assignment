@@ -1,0 +1,87 @@
+/*global style variables*/
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*entire body. similary to just using body tag */
+body{
+/*	display: flex;*/
+	width: 100%;
+/*	background-color: #C0C0C0;*/
+}
+
+/*//////////////////////*/
+/***FORMS STYLING***/
+/*//////////////////////*/
+.form-wrapper{
+	margin: 0px auto;
+	width: 500px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 50px;
+    padding-top: 0px auto;
+    padding-bottom: 0px auto;
+    width: 600px;
+/*    border-right: 2px solid rgba(255,255,255,.2);*/
+    border: 2px solid rgba(255,255,255,.2);
+    background-color: white;
+/*    box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);*/
+    box-shadow: 15px 15px 15px 15px rgba(140,140,140,0.5);
+    border-radius: 10px;
+    line-height: 40px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, .2);
+
+}
+.form-group{
+    font-size: 25px;
+    font-weight: bold;
+}
+.form-group label{
+	margin-left: 15px;
+}
+
+.form-wrapper .form-control{
+	border-radius: 40px;
+	height: 50px;
+	font-weight: 500;
+/*	border: 0.1px solid;*/
+}
+.form-wrapper .remember-forgot{
+	display:flex;
+	justify-content: space-between;
+	font-size:20px;
+}
+
+.remember-forgot a{
+	text-decoration: none;
+}
+
+.remember-forgot a:hover{
+	text-decoration: underline;
+}
+.form-wrapper .btn{
+	width: 100%;
+	height:55px;
+	border-radius: 40px;
+	box-shadow: 0 0 10px;
+	font-weight: 600;
+}
+
+.form-wrapper .signup-link{
+	text-align: center;
+}
+
+.signup-link p a{
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.signup-link p a:hover{
+	text-decoration: underline;
+}
+
