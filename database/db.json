@@ -1,0 +1,43 @@
+{
+    "posts" : [
+        {
+            "id" : 1,
+            "title" : "shoes",
+            "image" : "./images/",
+            "description" : "sth sth"
+        },
+        {
+            "id" : 2,
+            "title" : "shoes",
+            "image" : "./images/",
+            "description" : "sth sth"
+        },
+        {
+            "id" : 3,
+            "title" : "shoes",
+            "image" : "./images/",
+            "description" : "sth sth"
+        }
+    ],
+    "users" : [
+        {
+            "id" : 1,
+            "username" : "ayee",
+            "email" : "daagi210@gmail.com",
+            "password" : "qwerty12"
+        },
+        {
+            "id" : 3,
+            "username" : "ayee",
+            "email" : "daagi210@gmail.com",
+            "password" : "qwerty12"
+        },
+        {
+            "id" : 1,
+            "username" : "ayee",
+            "email" : "daagi210@gmail.com",
+            "password" : "qwerty12"
+        }
+    ]
+
+}
