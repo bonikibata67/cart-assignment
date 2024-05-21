@@ -1,0 +1,42 @@
+{
+    "users" : [
+        {
+            "id" : 1,
+            "username" : "ayee",
+            "email" : "daagi210@gmail.com",
+            "password" : "qwerty12"
+        },
+        {
+            "id" : 3,
+            "username" : "ayee",
+            "email" : "daagi210@gmail.com",
+            "password" : "qwerty12"
+        },
+        {
+            "id" : 1,
+            "username" : "ayee",
+            "email" : "daagi210@gmail.com",
+            "password" : "qwerty12"
+        }
+    ],
+    "products" :[
+        {
+            "id" : 1,
+            "title" : "shoes",
+            "image" : "./images/ps5.jpg",
+            "description" : "sth sth"
+        },
+        {
+            "id" : 1,
+            "title" : "shoes",
+            "image" : "./images/baseball.jpg",
+            "description" : "sth sth"
+        },
+        {
+            "id" : 1,
+            "title" : "shoes",
+            "image" : "./images/laptop-2.jpg",
+            "description" : "sth sth"
+        }
+    ]
+}
