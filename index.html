@@ -3,11 +3,255 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Homepage </title>
+    <title> Ile Shop: Homepage </title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 
-    <h1> Hello World </h1>
+    <div class="container">
+
+            
+        <!-- navbar div -->
+        <div class="navbar">
+            <div class="title">
+                <h1> Ile Shop </h1>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li> 
+                        <a href="#"> Home </a>
+                    </li>
+                    <li> 
+                        <a href="#"> Shop </a>
+                    </li>
+                    <li> 
+                        <a href="#"> Login </a>
+                    </li>
+                    <li> 
+                        <a href="#"> Signup </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="icon-cart">
+                <!-- read boxicons susage docs to understand better -->
+                <i id="cart-icon" class='bx bx-cart-alt bx-md bx-tada-hover'></i>
+                <span> 0 </span>
+            </div>
+        </div>
+
+        <div class="homepage">
+        <!-- main content div -->
+        <div class="main-content">
+
+            <!-- product cards -->
+            <div class="card">
+                <div class="image">
+                    <img src="images/baseball-glove-mizuno.jpg" alt="Image">
+                </div>
+                    <h2 class="title"> Product Name </h2>
+                <div class="price">
+                    <label> Ksh. 1000 </label>
+                </div>
+                <div>
+                    <button class="add-cart"> Add to Cart </button>
+                </div>
+            </div>
+
+            <!-- product cards -->
+            <div class="card">
+                <div class="image">
+                    <img src="images/baseball-glove-mizuno.jpg" alt="Image">
+                </div>
+                    <h2 class="title"> Product Name </h2>
+                <div class="price">
+                    <label> Ksh. 1000 </label>
+                </div>
+                <div>
+                    <button class="add-cart"> Add to Cart </button>
+                </div>
+            </div>
+
+            <!-- product cards -->
+            <div class="card">
+                <div class="image">
+                    <img src="images/baseball-glove-mizuno.jpg" alt="Image">
+                </div>
+                    <h2 class="title"> Product Name </h2>
+                <div class="price">
+                    <label> Ksh. 1000 </label>
+                </div>
+                <div>
+                    <button class="add-cart"> Add to Cart </button>
+                </div>
+            </div>
+
+            <!-- product cards -->
+            <div class="card">
+                <div class="image">
+                    <img src="images/baseball-glove-mizuno.jpg" alt="Image">
+                </div>
+                    <h2 class="title"> Product Name </h2>
+                <div class="price">
+                    <label> Ksh. 1000 </label>
+                </div>
+                <div>
+                    <button class="add-cart"> Add to Cart </button>
+                </div>
+            </div>
+
+            <!-- product cards -->
+            <div class="card">
+                <div class="image">
+                    <img src="images/baseball-glove-mizuno.jpg" alt="Image">
+                </div>
+                    <h2 class="title"> Product Name </h2>
+                <div class="price">
+                    <label> Ksh. 1000 </label>
+                </div>
+                <div>
+                    <button class="add-cart"> Add to Cart </button>
+                </div>
+            </div>
+
+            <!-- product cards -->
+            <div class="card">
+                <div class="image">
+                    <img src="images/ps5.jpg" alt="Image">
+                </div>
+                    <h2 class="title"> Product Name </h2>
+                <div class="price">
+                    <label> Ksh. 1000 </label>
+                </div>
+                <div>
+                    <button class="add-cart"> Add to Cart </button>
+                </div>
+            </div>
+
+
+        </div> 
+
+        <!-- cart sidebar pane -->
+        <div class="cart-sidebar">
+
+
+            <!-- topmost logo part -->
+            <div class="top">
+                <h2> Items In Cart </h2>
+            </div>
+        
+            <!-- list of menu panel -->
+            <div class="cart-items">
+                <div class="items">
+                    <div class="cart-image">
+                        <img src="images/desktop.jpg" alt="cart-image">
+                    </div>
+                    <div class="cart-name">
+                        <label> Cart Item </label>
+                    </div>
+                    <div class="cart-price">
+                        <label> Ksh. </label>
+                    </div>
+                    <div class="quantity">
+                        <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
+                        <span> 0 </span>
+                        <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
+                    </div>
+                </div>
+
+                <div class="items">
+                    <div class="cart-image">
+                        <img src="images/desktop.jpg" alt="cart-image">
+                    </div>
+                    <div class="cart-name">
+                        <label> Cart Item </label>
+                    </div>
+                    <div class="cart-price">
+                        <label> Ksh. </label>
+                    </div>
+                    <div class="quantity">
+                        <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
+                        <span> 0 </span>
+                        <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
+                    </div>
+                </div>
+
+                    <div class="items">
+                        <div class="cart-image">
+                            <img src="images/desktop.jpg" alt="cart-image">
+                        </div>
+                        <div class="cart-name">
+                            <label> Cart Item </label>
+                        </div>
+                        <div class="cart-price">
+                            <label> Ksh. </label>
+                        </div>
+                        <div class="quantity">
+                            <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
+                            <span> 0 </span>
+                            <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
+                        </div>
+                    </div>
+                    
+                    <div class="items">
+                        <div class="cart-image">
+                            <img src="images/desktop.jpg" alt="cart-image">
+                        </div>
+                        <div class="cart-name">
+                            <label> Cart Item </label>
+                        </div>
+                        <div class="cart-price">
+                            <label> Ksh. </label>
+                        </div>
+                        <div class="quantity">
+                            <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
+                            <span> 0 </span>
+                            <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
+                        </div>
+                    </div>
     
+                    <div class="items">
+                        <div class="cart-image">
+                            <img src="images/desktop.jpg" alt="cart-image">
+                        </div>
+                        <div class="cart-name">
+                            <label> Cart Item </label>
+                        </div>
+                        <div class="cart-price">
+                            <label> Ksh. </label>
+                        </div>
+                        <div class="quantity">
+                            <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
+                            <span> 0 </span>
+                            <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
+                        </div>
+                    </div>
+
+                    <div class="items">
+                        <div class="cart-image">
+                            <img src="images/desktop.jpg" alt="cart-image">
+                        </div>
+                        <div class="cart-name">
+                            <label> Cart Item </label>
+                        </div>
+                        <div class="cart-price">
+                            <label> Ksh. </label>
+                        </div>
+                        <div class="quantity">
+                            <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
+                            <span> 0 </span>
+                            <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
+                        </div>
+                    </div>
+                    <div class="cart-button">
+                        <button id="cart-close"> Close </button>
+                        <button id="cart-checout"> Checkout </button>
+                    </div>
+                </div>
+        </div>
+        </div>
+       
+        
+    <script src="script.js"></script>
 </body>
 </html>

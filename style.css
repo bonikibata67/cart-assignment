@@ -1,87 +1,237 @@
-/*global style variables*/
+:root{
+	--red: hsl(1, 90%, 64%);
+	--blue: hsl(219, 85%, 26%);
+	--white: hsl(0, 0%, 100%);
+	--very-light-grayish-blue: hsl(210, 60%, 98%);
+	--light-grayish-blue-1: hsl(211, 68%, 94%);
+	--light-grayish-blue-2: hsl(205, 33%, 90%);
+	--grayish-blue: hsl(219, 14%, 63%);
+	--dark-grayish-blue: hsl(219, 12%, 42%);
+	--very-dark-blue: hsl(224, 21%, 14%);
+    --almost-white: hsl(0, 0%, 98%);
+	--medium-gray: hsl(0, 0%, 41%);
+	--almost-black: hsl(0, 0%, 8%);
+}
+
 *{
-	margin:0px;
-	padding:0px;
-	box-sizing: border-box;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/*entire body. similary to just using body tag */
 body{
-/*	display: flex;*/
-	width: 100%;
-/*	background-color: #C0C0C0;*/
+    width: 100vw;
 }
 
-/*//////////////////////*/
-/***FORMS STYLING***/
-/*//////////////////////*/
-.form-wrapper{
-	margin: 0px auto;
-	width: 500px;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 50px;
-    padding-top: 0px auto;
-    padding-bottom: 0px auto;
-    width: 600px;
-/*    border-right: 2px solid rgba(255,255,255,.2);*/
-    border: 2px solid rgba(255,255,255,.2);
-    background-color: white;
-/*    box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);*/
-    box-shadow: 15px 15px 15px 15px rgba(140,140,140,0.5);
+.container{
+    /* background-color: red; */
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    /* border: 1px solid; */
+    padding: .4rem;
+    margin: .4rem;
+    border-bottom: 1px solid;
+    border-bottom-width: 60%;
+}
+
+.navbar .menu{
+    display: flex;
+}
+
+.menu ul li{
+    list-style: none;
+    font-weight: 700;
+    justify-content: baseline;
+    display: inline-flex;
+    margin-right: 1.5rem;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: var(--medium-gray);
+}
+
+.menu ul li a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--almost-black);
+    text-underline-offset: .7rem;   /*push underline lower*/
+}
+
+
+.navbar .icon-cart span{
+    /* width: 30px;
+    height: 30px; */
+    background-color: red;
     border-radius: 10px;
-    line-height: 40px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: rgba(255, 255, 255, .2);
-
-}
-.form-group{
-    font-size: 25px;
-    font-weight: bold;
-}
-.form-group label{
-	margin-left: 15px;
+    color: white;
+    font-size: 900;
+    /* margin: .4rem; */
+    padding: .1rem .4rem;
 }
 
-.form-wrapper .form-control{
-	border-radius: 40px;
-	height: 50px;
-	font-weight: 500;
-/*	border: 0.1px solid;*/
+.homepage{
+    display: flex;
+    /* flex-direction: column; */
+
 }
-.form-wrapper .remember-forgot{
-	display:flex;
-	justify-content: space-between;
-	font-size:20px;
+.main-content{
+    display: flex;
+    flex-wrap: wrap;
+    /* display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr); */
+    width: 90%;
+    margin: 0px auto;
+    /* border: 1px solid; */
+    padding: 1rem;
+    gap: 1rem;
 }
 
-.remember-forgot a{
-	text-decoration: none;
+.main-content .card{
+    border-radius: 17px;
+    padding: .9rem;
+    align-items: center;
+    justify-content: center;
+    /* border: 5px solid; */
+    box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
 }
 
-.remember-forgot a:hover{
-	text-decoration: underline;
-}
-.form-wrapper .btn{
-	width: 100%;
-	height:55px;
-	border-radius: 40px;
-	box-shadow: 0 0 10px;
-	font-weight: 600;
+.card .title h2{
+    font-weight: 600;
+    font-size: large;
+    /* color: red; */
 }
 
-.form-wrapper .signup-link{
-	text-align: center;
+.card .image{
+    overflow: hidden;
+    width: 170px;
+    height: 180px;
+    /* object-fit: cover; */
+    /* border: 1px solid; */
 }
 
-.signup-link p a{
-	text-decoration: none;
+.card .image image{
+    width: 100%;
+    height: 100%;
+}
+
+.card .price{
+    font-size: medium;
+}
+
+.card button{
+    padding: .4rem;
+    cursor: pointer;
+	/* width: 25%; */
+	padding: 10px;
+	margin: 2rem 0;
 	font-weight: 700;
+	border-radius: 10px;
+	border: 1px solid var(--almost-black);
+	background-color: var(--almost-black);
+	color: var(--almost-white);
+	cursor: pointer;
 }
 
-.signup-link p a:hover{
-	text-decoration: underline;
+
+/**************************/
+/* style the cart-sidebar */
+/**************************/
+
+.cart-sidebar{
+    /* display: none; */
+    visibility: hidden;
+    position: relative;
+	top: 0px;
+	right: 0px;
+	/* height: 100%; */
+	width: 0px;
+	/* background-color: #474c52; */
+	/* padding: .4rem .4rem;Order followed is: {Top & bottom} {Left & Right} */
+	transition: all 0.5s ease;
 }
 
+.cart-sidebar h2{
+    color: var(--dark-grayish-blue);
+}
+.cart-sidebar.active ~ .homepage{
+    right: 450px;
+    width: calc(100% - 450px)
+}
+.cart-sidebar.active{
+    width: 450px;
+    visibility: visible;
+    padding: 1rem ;
+    border-radius: 17px;
+    background-color: var(--almost-black);
+    color: var(--almost-white);
+}
+
+/* position of button when cart-sidebar is inactive */
+.cart-sidebar #btn {
+	position: relative;
+	color: white;
+	top: .4rem;
+	left: 50%;
+	font-size: 1.2rem;
+	line-height: 50px;
+	transform: translateX(-50%);
+	cursor: pointer;
+}
+
+.cart-sidebar.active img{
+    width: 100%;
+    height: 100%;
+}
+
+.cart-sidebar.active .cart-items .items{
+    display: grid;
+    grid-template-columns: 70px 100px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.cart-sidebar.active .cart-items .items span{
+    display: inline-block;
+}
+
+.cart-sidebar.active .items:nth-child(even){
+    background-color: #eee1;
+}
+
+.cart-sidebar.active .cart-items{
+    overflow: auto;
+}
+
+.cart-sidebar.active .cart-button{
+    display: flex;
+    gap: .2rem;
+    justify-content: space-around;
+    padding: .4rem;
+}
+
+.cart-button button{
+    width: 120%;
+    padding: 1rem;
+    font-weight: 500;
+    background-color: var(--light-grayish-blue-2);
+    border-radius: 17px;
+}
+
+.cart-button button:hover{
+    cursor: pointer;
+    color: var(--almost-black);
+    background-color: aquamarine;
+}

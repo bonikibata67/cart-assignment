@@ -1,0 +1,7 @@
+#ignore all the to be deleted
+delete/
+
+
+#vscode settings
+.vscode/
+
