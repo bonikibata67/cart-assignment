@@ -34,7 +34,7 @@ function closeSideBar(){
 
 // store the database
 const productsURL = 'http://localhost:3000/products'
-const usersURL = 'http://localhost:3000/users'
+const usersUrl = "http://localhost:3000/users";
 
 
 //ADDING THE CART FUNCTIONALITY

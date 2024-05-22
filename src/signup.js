@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const signBtn = document.getElementById('signup');
     const usersUrl = "http://localhost:3000/users";
-    const addForm = document.querySelector('#add-value-form'); 
+   
 
     signBtn.addEventListener('click', async (e) => {
         e.preventDefault();
