@@ -61,7 +61,7 @@ function addDataToHtml(){
                 <div class="image">
                     <img src=${product.image} alt="Image">
                 </div>
-                    <h2 class="title"> ${product.title} </h2>
+                    <p class="title"> ${product.title} </p>
                 <div class="price">
                     <label> Ksh. ${product.price} </label>
                 </div>

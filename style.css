@@ -27,11 +27,15 @@ body{
 
 .container{
     /* background-color: red; */
-    margin: 10px;
-    padding: 10px;
+    /* margin: 10px;
+    padding: 10px; */
     display: flex;
     flex-direction: column;
 
+}
+
+.top{
+    background-color: var(--sky-blue);
 }
 
 .navbar{
@@ -43,6 +47,10 @@ body{
     margin: .4rem;
     border-bottom: 1px solid;
     border-bottom-width: 60%;
+}
+
+.navbar .title{
+    display: inline-flex;
 }
 
 .navbar .menu{
@@ -130,6 +138,19 @@ body{
 
 .card .price{
     font-size: medium;
+}
+
+.card .title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    font-size: large;
+    line-height: 1.5rem;
+    color: var(--very-dark-blue);
+}
+
+.card .price label{
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5rem;
 }
 
 .card button{
