@@ -1,41 +1,14 @@
 console.log('begin script execution')
 
-// toggle the cart sidebar
-const cartIcon = document.querySelector('#cart-icon')	//grab the cart menu icon
-const sidebar = document.querySelector('.cart-sidebar')	//grab the sidebar
-const closeBtn = document.getElementById('cart-close')
-const mainDiv = document.querySelector('.main-content')
-// const cartBtn = document.querySelector('.add-cart')  //add to cart
-let productHtml = document.querySelector('.card')   //adding html
-// const signBtn= document.getElementById('signup')
-// const loginBtn = document.getElementById('login')
-
-
-
-console.log('got the variables')
-
-closeBtn.addEventListener('click', closeSideBar)    
-cartIcon.addEventListener('click', closeSideBar)
-// signBtn.addEventListener('click', signup)
-// loginBtn.addEventListener('click', login)
-
-
-function closeSideBar(){
-    sidebar.classList.toggle('active');
-    console.log('status changed to active')    
-}
-
-
-// function signup(e){
-//     e.preventDefault()
-//     console.log('signup clicked')    
-// }
-
-
-// store the database
 const productsURL = 'http://localhost:3000/products'
-const usersUrl = "http://localhost:3000/users";
+const cartURL = 'http://localhost:3000/cart'
 
+
+const cartIcon = document.querySelector('#cart-icon')	//grab the cart menu icon
+const mainDiv = document.querySelector('.main-content')
+const cartBtn = document.querySelector('#add-cart')  //add to cart
+let productHtml = document.querySelector('.card')   //adding html
+const cartItem = document.querySelector('.cart-items')
 
 //ADDING THE CART FUNCTIONALITY
 // handle the data
@@ -66,7 +39,7 @@ function addDataToHtml(){
                     <label> Ksh. ${product.price} </label>
                 </div>
                 <div>
-                    <button id="add-cart" onclick="addToCart()" class="add-cart"> Add to Cart </button>
+                    <button id="add-cart" onclick="addCartItems()" class="add-cart"> Add to Cart </button>
                 </div>
             </div>`
         })
@@ -78,9 +51,47 @@ function addDataToHtml(){
 fetchData()
 
 // adding to cart
+let cart_items = []
 
-function addToCart(e){
-    alert('do you want to add item to cart?')
-    let product_id = e.target.parentElement.products.id
-    console.log(product_id )
+function fetchCartItems(){
+    fetch(cartURL).then(response => response.json())
+    .then(data => {
+        cart_items = data
+        console.log(cart_items)
+
+        addCartItems()
+    })
 }
+
+function addCartItems(){
+    let html = ''
+
+    if(cart_items.length > 0){
+        cart_items.forEach(cart_item => {
+            html += `
+            <div class="items">
+            <div class="cart-image">
+                <img src="${cart_item.image}" alt="cart-image">
+            </div>
+            <div class="cart-name">
+                <label> ${cart_item.title} </label>
+            </div>
+            <div class="cart-price">
+                <label> Ksh.${cart_item.price} </label>
+            </div>
+            <div class="quantity">
+                <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
+                <span> 0 </span>
+                <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
+            </div>
+        </div>
+`
+        })
+    }
+    cartItem.innerHtml += html
+}
+
+// function addToCart(e){
+//     // alert('do you want to add item to cart?')
+//     if 
+// }

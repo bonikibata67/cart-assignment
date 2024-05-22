@@ -10,180 +10,283 @@
 <body>
 
     <div class="container">
+        <!-- topmost div -->
+        <div class="top">
+            <div class="navbar">
+                <!-- leftmost part -->
+                <div class="left">
+                    <div class="logo">
+                        <i class='bx bxl-yelp bx-md bx-flashing-hover'>
+                        <label> kaleido </label></i>
+                    </div>
+                    <div class="logo-text">
+                        <label> Everything You've Ever Wanted... And More </label>
+                    </div>
+                </div>
 
-        <div class="top">  
-        <!-- navbar div -->
-        <div class="navbar">
-            <div class="title">
-                <h1> kaleido </h1> <i class='bx bxl-yelp bx-md bx-tada-hover'></i>
+                <!-- middle part -->
+                <div class="middle">
+                    <form class="d-flex" role="search">
+                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                         <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                </div>
+
+                <!-- far right -->
+                <div class="right">
+                    <!-- location div -->
+                    <div class="location">
+                        <div>
+                            <i class='bx bx-location-plus bx-md'></i>
+                        </div>
+                        <div>
+                            <!-- <label> Deliver To... </label> <br/> -->
+                            <label> Ongata Rongai, Kenya </label>
+                        </div>
+                    </div>
+
+                    <!-- login div -->
+                    <div class="login">
+                        <i class='bx bx-user-circle bx-sm'></i>
+                        <label><a href="./login.html"> Login & Register </a> </label>
+                    </div>
+
+                    <!-- cart div -->
+                    <div class="cart">
+                        <i class='bx bx-cart-alt bx-md bx-tada-hover'></i>
+                        <span id="cart-icon"> 0 </span>
+                    </div>
+                </div>
+
             </div>
-            <div class="menu">
+
+            <div class="categories">
+                    <div class="category">
+                        <ul>
+                            <li><a href="#"> All Catgeories </a></li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <ul>
+                            <li><a href="#"> Electronics </a></li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <ul>
+                            <li><a href="#"> Health & Beauty </a></li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <ul>
+                            <li><a href="#"> Fashion </a></li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <ul>
+                            <li><a href="#"> Fast Food </a></li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <ul>
+                            <li><a href="#"> Liquor </a></li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <ul>
+                            <li><a href="#"> Sporting Goods </a></li>
+                        </ul>
+                    </div>
+                    <div class="category">
+                        <ul>
+                            <li><a href="#"> Others </a></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+        <!-- end of the top div -->
+
+
+        <!-- middle div -->
+        <div class="content">
+            <!-- main page content -->
+            <div class="main-content">
+
+                    <!-- product cards to be added dynamicaly from db-->
+                    <!-- <div class="card">
+                        <div class="image">
+                            <img src="images/ps5.jpg" alt="Image">
+                        </div>
+                            <p class="title"> Product Name </p>
+                        <div class="price">
+                            <label> Ksh. 1000 </label>
+                        </div>
+                        <div>
+                            <button class="add-cart"> Add to Cart </button>
+                        </div>
+                    </div> -->
+
+                
+            </div>
+            
+            <!-- sidebar content -->
+            <div class="sidebar-content">
+
+                <!-- topmost logo part -->
+                <div class="sidebar-top">
+                    <h2> Items In Cart </h2>
+                </div>
+
+                <div class="cart-items">
+                    <div class="items">
+                        <div class="cart-image">
+                            <img src="images/desktop. jpg" alt="cart-image">
+                        </div>
+                        <div class="cart-name">
+                            <label> Cart Item </label>
+                        </div>
+                        <div class="cart-price">
+                            <label> Ksh. </label>
+                        </div>
+                        <div class="quantity">
+                            <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
+                            <span> 0 </span>
+                            <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-footer">
+                    <div>
+                        <label> Total Price </label>
+                    </div>
+                    <div class="total-cart-price">
+                        <label> Ksh. 1000 </label>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+                
+        </div>
+        <!-- end of middle div -->
+
+
+
+
+
+
+        <!-- beginning of footer div -->
+        <div class="footer">
+            <!-- left div -->
+            <div class="left">
+                <div class="logo">
+                    <i class='bx bxl-yelp bx-md bx-tada-hover'></i>
+                    <label> kaleido </label>
+                </div>
+                <div>
+                    <div class="helpline">
+                        <label> Earn Rewards Everytime You shop </label><br/>
+                        <span> +254 700 000 000</span>
+                    </div>
+                    <div>
+                        <label> Stay in touch with Us</label>
+                    </div>
+                    <div class="socials">
+                        <span>
+                            <a href="#">
+                                <i class='bx bxl-facebook-circle bx-sm'></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#">
+                                <i class='bx bxl-twitter bx-sm'></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#">
+                                <i class='bx bxl-instagram bx-sm'></i>
+                            </a>
+                        </span>
+                        <span>
+                            <a href="#">
+                                <i class='bx bxl-discord-alt bx-sm'></i>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- middle div customer service-->
+            <div class="middle">
+                <label> Customer Service </label>
                 <ul>
-                    <li> 
-                        <a href="#"> Home </a>
+                    <li>
+                        <i class='bx bx-chevron-right 
+                        <a href="#">Service & Waranty </a>
                     </li>
-                    <li> 
-                        <a href="#"> Shop </a>
+                    <li>
+                        <i class='bx bx-chevron-right'></i>
+                        <a href="#">Return & Exchange </a>
                     </li>
-                    <li> 
-                        <a href="./login.html"> Login </a>
+                    <li>
+                        <i class='bx bx-chevron-right'></i>
+                        <a href="#">Secured Online Payments </a>
                     </li>
-                    <li> 
-                        <a href="./signup.html"> Signup </a>
+                    <li>
+                        <i class='bx bx-chevron-right'></i>
+                        <a href="#">Cash on Delivery </a>
+                    </li>
+                    <li>
+                        <i class='bx bx-chevron-right'></i>
+                        <a href="#">Shipping & Delivery </a>
                     </li>
                 </ul>
             </div>
-            <div class="icon-cart">
-                <!-- read boxicons susage docs to understand better -->
-                <i id="cart-icon" class='bx bx-cart-alt bx-md bx-tada-hover'></i>
-                <span> 0 </span>
-            </div>
-        </div>
-        </div>
 
-        <div class="homepage">
-        <!-- main content div -->
-        <div class="main-content">
-
- 
-                <!-- product cards -->
-                <div class="card">
-                    <div class="image">
-                        <img src="images/ps5.jpg" alt="Image">
-                    </div>
-                        <p class="title"> Product Name </p>
-                    <div class="price">
-                        <label> Ksh. 1000 </label>
-                    </div>
-                    <div>
-                        <button class="add-cart"> Add to Cart </button>
-                    </div>
-                </div>
-            <!-- </div> Greatly affects mainapage styling -->
-
-
-        </div> 
-
-        <!-- cart sidebar pane -->
-        <div class="cart-sidebar">
-
-
-            <!-- topmost logo part -->
-            <div class="top">
-                <h2> Items In Cart </h2>
-            </div>
-        
-            <!-- list of menu panel -->
-            <div class="cart-items">
-                <div class="items">
-                    <div class="cart-image">
-                        <img src="images/desktop.jpg" alt="cart-image">
-                    </div>
-                    <div class="cart-name">
-                        <label> Cart Item </label>
-                    </div>
-                    <div class="cart-price">
-                        <label> Ksh. </label>
-                    </div>
-                    <div class="quantity">
-                        <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
-                        <span> 0 </span>
-                        <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
-                    </div>
+            <!-- right div -->
+            <div class="right">
+                <label> Help & Support </label>
+                <div class="help">
+                    <ul>
+                        <li>
+                            <i class='bx bx-chevron-right'></i>
+                            <a href="#">Privacy Policy </a>
+                        </li>
+                        <li>
+                            <i class='bx bx-chevron-right'></i>
+                            <a href="#">Anti-Fraud Disclaimer</a>
+                        </li>
+                        <li>
+                            <i class='bx bx-chevron-right'></i>
+                            <a href="#">Terms & Conditions </a>
+                        </li>
+                        <li>
+                            <i class='bx bx-chevron-right'></i>
+                            <a href="#">Contact Us </a>
+                        </li>
+                        <li>
+                            <i class='bx bx-chevron-right'></i>
+                            <a href="#">FAQ'<sup>s</sup> </a>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="items">
-                    <div class="cart-image">
-                        <img src="images/desktop.jpg" alt="cart-image">
-                    </div>
-                    <div class="cart-name">
-                        <label> Cart Item </label>
-                    </div>
-                    <div class="cart-price">
-                        <label> Ksh. </label>
-                    </div>
-                    <div class="quantity">
-                        <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
-                        <span> 0 </span>
-                        <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
-                    </div>
-                </div>
-
-                    <div class="items">
-                        <div class="cart-image">
-                            <img src="images/desktop.jpg" alt="cart-image">
-                        </div>
-                        <div class="cart-name">
-                            <label> Cart Item </label>
-                        </div>
-                        <div class="cart-price">
-                            <label> Ksh. </label>
-                        </div>
-                        <div class="quantity">
-                            <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
-                            <span> 0 </span>
-                            <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
-                        </div>
-                    </div>
-                    
-                    <div class="items">
-                        <div class="cart-image">
-                            <img src="images/desktop.jpg" alt="cart-image">
-                        </div>
-                        <div class="cart-name">
-                            <label> Cart Item </label>
-                        </div>
-                        <div class="cart-price">
-                            <label> Ksh. </label>
-                        </div>
-                        <div class="quantity">
-                            <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
-                            <span> 0 </span>
-                            <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
-                        </div>
-                    </div>
+                <div class="support">
+                    <label> Download our App </label><br/>
+                    <label> <i class='bx bxs-copyright'></i>2024. kaleido. All Rights Reserved </label>
+                    <i class='bx bx-chevron-down'></i>
+                    <i class='bx bxs-truck'></i>
+                    <i class='bx bxs-plane-take-off'></i>
+                    <i class='bx bxs-plane-land' ></i>
     
-                    <div class="items">
-                        <div class="cart-image">
-                            <img src="images/desktop.jpg" alt="cart-image">
-                        </div>
-                        <div class="cart-name">
-                            <label> Cart Item </label>
-                        </div>
-                        <div class="cart-price">
-                            <label> Ksh. </label>
-                        </div>
-                        <div class="quantity">
-                            <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
-                            <span> 0 </span>
-                            <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
-                        </div>
-                    </div>
-
-                    <div class="items">
-                        <div class="cart-image">
-                            <img src="images/desktop.jpg" alt="cart-image">
-                        </div>
-                        <div class="cart-name">
-                            <label> Cart Item </label>
-                        </div>
-                        <div class="cart-price">
-                            <label> Ksh. </label>
-                        </div>
-                        <div class="quantity">
-                            <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
-                            <span> 0 </span>
-                            <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
-                        </div>
-                    </div>
-                    <div class="cart-button">
-                        <button id="cart-close"> Close </button>
-                        <button id="cart-checout"> Checkout </button>
-                    </div>
                 </div>
+            </div>
         </div>
-        </div>
-       
+        <!-- end of footer div -->
+
+
+    </div>       
         
     <script src="script.js"></script>
 </body>
