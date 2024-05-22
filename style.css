@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 :root{
 	--red: hsl(1, 90%, 64%);
 	--blue: hsl(219, 85%, 26%);
@@ -242,26 +241,6 @@ body{
 /****FORM STYLING***/
 /********************/
 
-=======
-/*global style variables*/
-*{
-	margin:0px;
-	padding:0px;
-	box-sizing: border-box;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/*entire body. similary to just using body tag */
-body{
-/*	display: flex;*/
-	width: 100%;
-/*	background-color: #C0C0C0;*/
-}
-
-/*//////////////////////*/
-/***FORMS STYLING***/
-/*//////////////////////*/
->>>>>>> trial
 .form-wrapper{
 	margin: 0px auto;
 	width: 500px;
@@ -277,11 +256,7 @@ body{
 /*    box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);*/
     box-shadow: 15px 15px 15px 15px rgba(140,140,140,0.5);
     border-radius: 10px;
-<<<<<<< HEAD
     line-height: 2.3rem;
-=======
-    line-height: 40px;
->>>>>>> trial
 	border-width: 2px;
 	border-style: solid;
 	border-color: rgba(255, 255, 255, .2);
@@ -291,8 +266,6 @@ body{
     font-size: 25px;
     font-weight: bold;
 }
-<<<<<<< HEAD
-
 
 .form-wrapper .form-control{
 	border-radius: 17px;
@@ -300,17 +273,6 @@ body{
 	font-weight: 500;
     width: 100%;
 	border: .1px solid;
-=======
-.form-group label{
-	margin-left: 15px;
-}
-
-.form-wrapper .form-control{
-	border-radius: 40px;
-	height: 50px;
-	font-weight: 500;
-/*	border: 0.1px solid;*/
->>>>>>> trial
 }
 .form-wrapper .remember-forgot{
 	display:flex;
@@ -320,10 +282,8 @@ body{
 
 .remember-forgot a{
 	text-decoration: none;
-<<<<<<< HEAD
     color: var(--sky-blue);
-=======
->>>>>>> trial
+
 }
 
 .remember-forgot a:hover{
@@ -335,15 +295,13 @@ body{
 	border-radius: 40px;
 	box-shadow: 0 0 10px;
 	font-weight: 600;
-<<<<<<< HEAD
     background-color: var(--sky-blue);
     border: .4px solid var(--sky-blue);
     color: var(--almost-white);
     font-weight: 900;
     font-size: 1rem;
     text-align: center;
-=======
->>>>>>> trial
+
 }
 
 .form-wrapper .signup-link{
@@ -353,16 +311,9 @@ body{
 .signup-link p a{
 	text-decoration: none;
 	font-weight: 700;
-<<<<<<< HEAD
     color: var(--sky-blue);
-=======
->>>>>>> trial
 }
 
 .signup-link p a:hover{
 	text-decoration: underline;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> trial
