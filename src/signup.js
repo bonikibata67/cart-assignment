@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const signBtn = document.getElementById('signup');
     const usersUrl = "http://localhost:3000/users";
+    
    
 
     signBtn.addEventListener('click', async (e) => {
