@@ -22,21 +22,59 @@
     "products" :[
         {
             "id" : 1,
-            "title" : "shoes",
-            "image" : "./images/ps5.jpg",
-            "description" : "sth sth"
+            "title" : "Baseball Glove",
+            "image" : "./images/baseball-glove-mizuno.jpg",
+            "description" : "sth sth",
+            "price" : 1738
         },
         {
-            "id" : 1,
-            "title" : "shoes",
-            "image" : "./images/baseball.jpg",
-            "description" : "sth sth"
+            "id" : 2,
+            "title" : "Baseball Hat",
+            "image" : "./images/baseball-hat.jpg",
+            "description" : "sth sth",
+            "price" : 1738
         },
         {
-            "id" : 1,
-            "title" : "shoes",
-            "image" : "./images/laptop-2.jpg",
-            "description" : "sth sth"
+            "id" : 3,
+            "title" : "PS5",
+            "image" : "./images/surface-laptop.jpg",
+            "description" : "sth sth",
+            "price" : 1738
+        },
+        {
+            "id" : 4,
+            "title" : "Gaming PC",
+            "image" : "./images/gaming-pc.jpg",
+            "description" : "sth sth",
+            "price" : 1738
+        },
+        {
+            "id" : 5,
+            "title" : "Samsung Flip",
+            "image" : "./images/samsungFlip.jpg",
+            "description" : "sth sth",
+            "price" : 1738
+        },
+        {
+            "id" : 6,
+            "title" : "Samsung Galaxy",
+            "image" : "./images/s22.jpg",
+            "description" : "sth sth",
+            "price" : 1738
+        },
+        {
+            "id" : 7,
+            "title" : "Kntucky Fries",
+            "image" : "./images/food.jpg",
+            "description" : "sth sth",
+            "price" : 1738
+        },
+        {
+            "id" : 8,
+            "title" : "Office Chair",
+            "image" : "./images/chair.jpg",
+            "description" : "sth sth",
+            "price" : 1738
         }
     ]
 }

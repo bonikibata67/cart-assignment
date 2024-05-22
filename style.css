@@ -87,11 +87,11 @@ body{
 
 }
 .main-content{
-    display: flex;
-    flex-wrap: wrap;
-    /* display: grid;
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2,1fr); */
+    grid-template-rows: repeat(2,1fr);
     width: 90%;
     margin: 0px auto;
     /* border: 1px solid; */
@@ -106,6 +106,7 @@ body{
     justify-content: center;
     /* border: 5px solid; */
     box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+    /* height: 300px; */
 }
 
 .card .title h2{
@@ -226,15 +227,18 @@ body{
 .cart-button button{
     width: 120%;
     padding: 1rem;
-    font-weight: 500;
-    background-color: var(--light-grayish-blue-2);
+    font-weight: 900;
+    background-color: var(--sky-blue);
+    border: .2px solid var(--sky-blue);
+    color: var(--almost-white);
+    font-size: 1rem;
     border-radius: 17px;
+    text-align: center;
 }
 
 .cart-button button:hover{
     cursor: pointer;
     color: var(--almost-black);
-    background-color: aquamarine;
 }
 
 /********************/
@@ -317,3 +321,4 @@ body{
 .signup-link p a:hover{
 	text-decoration: underline;
 }
+
