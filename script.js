@@ -10,6 +10,7 @@ const cartBtn = document.querySelector('#add-cart')  //add to cart
 let productHtml = document.querySelector('.card')   //adding html
 const cartItem = document.querySelector('.cart-items')
 
+
 //ADDING THE CART FUNCTIONALITY
 // handle the data
 let products = []
@@ -63,6 +64,7 @@ function fetchCartItems(){
     })
 }
 
+
 function addCartItems(){
     let html = ''
 
@@ -80,18 +82,22 @@ function addCartItems(){
                 <label> Ksh.${cart_item.price} </label>
             </div>
             <div class="quantity">
-                <span class="cart-minus"><i class='bx bx-message-square-add bx-sm'></i></span>
+                <span class="cart-minus" onclick="incrementVal"><i class='bx bx-message-square-add bx-xs'></i></span>
                 <span> 0 </span>
-                <span class="cart-minus"><i class='bx bx-message-square-minus bx-sm'></i></span>
+                <span class="cart-minus" onclick="decrementVal"><i class='bx bx-message-square-minus bx-xs'></i></span>
             </div>
-        </div>
-`
+        </div>`
         })
+    } else{
+        html += `<div>
+                    <label> There are no items in your cart</label>
+                </div>`
     }
-    cartItem.innerHtml += html
+    // console.log(cartItem.innerHtml += html)
+    cartItem.innerHTML += html
 }
 
-// function addToCart(e){
-//     // alert('do you want to add item to cart?')
-//     if 
-// }
+
+fetchCartItems()
+
+
