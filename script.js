@@ -37,7 +37,7 @@ function addDataToHtml(){
                 </div>
                     <p class="title"> ${product.title} </p>
                 <div class="price">
-                    <label> Ksh. ${product.price} </label>
+                    <label> Ksh. ${product.price}/= </label>
                 </div>
                 <div>
                     <button id="add-cart" onclick="addCartItems('${product.id}')" class="add-cart"> Add to Cart </button>
@@ -103,7 +103,10 @@ function updateCartUI() {
             <span> 0 </span>
             <span class="cart-plus" onclick="decrementVal"><i class='bx bx-message-square-add bx-xs'></i></span>
         </div>
-    </div>`
+        <div>
+            <i class='bx bxs-truck'></i>
+        </div>
+        </div>`
 
     // increment the total value also
     total += product.price
