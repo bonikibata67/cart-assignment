@@ -93,9 +93,9 @@ function updateCartUI() {
             <label> Ksh.${product.price} </label>
         </div>
         <div class="quantity">
-            <span class="cart-minus" onclick="incrementVal"><i class='bx bx-message-square-add bx-xs'></i></span>
+            <span class="cart-minus" onclick="incrementVal"><i class='bx bx-message-square-minus bx-xs'></i></span>
             <span> 0 </span>
-            <span class="cart-minus" onclick="decrementVal"><i class='bx bx-message-square-minus bx-xs'></i></span>
+            <span class="cart-plus" onclick="decrementVal"><i class='bx bx-message-square-add bx-xs'></i></span>
         </div>
     </div>`
     })

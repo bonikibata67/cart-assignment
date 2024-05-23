@@ -34,8 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                // console.log("User added successfully:", )
-                await response.json()
+                console.log("User added successfully:",await response.json())
 
                 // set timer delay to allow viewing of pop notifs
                 alertDiv.style.display = 'flex'
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
 
                     window.location.href = indexUrl
-                },5000)
+                },3000)
             } else {
                 // console.error("Error adding user:", response.statusText);
                 alertDiv.style.display = 'flex'

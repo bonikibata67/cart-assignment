@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => {
 
                     window.location.href = indexUrl
-                },5000)
+                },3000)
             
                 // You can redirect the user to another page or perform some other action here
             } else {
