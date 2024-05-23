@@ -308,6 +308,7 @@ body{
 }
 
 .content .main-content .card button{
+    /* margin: 0px auto; */
     padding: .4rem;
     cursor: pointer;
 	/* width: 25%; */
@@ -351,6 +352,20 @@ body{
     width: 95%;
 }
 
+.content .sidebar-content .cart-items .empty-cart{
+    /* overflow: hidden; */
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    object-fit: cover;
+    /* border: 1px solid; */
+}
+
+.content .sidebar-content .cart-items .empty-cart img{
+    width: 100%;
+    height: 100%;
+}
 .content .sidebar-content .cart-items .items{
     display: inline-flex;
     padding: .4rem;

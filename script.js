@@ -3,11 +3,12 @@ console.log('begin script execution')
 const productsURL = 'http://localhost:3000/products'
 
 
-const cartIcon = document.querySelector('#cart-icon')	//grab the cart menu icon
+const cartCount = document.querySelector('#cart-count')	//grab the cart menu icon
 const mainDiv = document.querySelector('.main-content')
 const cartBtn = document.querySelector('#add-cart')  //add to cart
 let productHtml = document.querySelector('.card')   //adding html
 const cartItem = document.querySelector('.cart-items')
+const totalPrice = document.getElementById('total-cart-price')
 
 
 //ADDING THE CART FUNCTIONALITY
@@ -78,8 +79,13 @@ function addCartItems(productId) {
 // Update the cart UI
 function updateCartUI() {
     let html = ''
+    let total = 0
 
-    if (cart.length > 0){
+    cartCount.innerHTML = cart.length   //increment counter on cart
+
+    if (cart.length == 0){
+        totalPrice.innerHTML = `<label> Ksh.${total} </label>`
+    } else if (cart.length > 0){
     cart.forEach(product => {
         html += `
         <div class="items">
@@ -98,6 +104,11 @@ function updateCartUI() {
             <span class="cart-plus" onclick="decrementVal"><i class='bx bx-message-square-add bx-xs'></i></span>
         </div>
     </div>`
+
+    // increment the total value also
+    total += product.price
+    totalPrice.innerHTML = `<label> Ksh.${total} </label>`
+
     })
     } else {
         html += `<div>

@@ -48,7 +48,7 @@
                     <!-- cart div -->
                     <div class="cart">
                         <i class='bx bx-cart-alt bx-md bx-tada-hover'></i>
-                        <span id="cart-icon"> 0 </span>
+                        <span id="cart-count"> 0 </span>
                     </div>
                 </div>
 
@@ -142,6 +142,11 @@
                 </div>
 
                 <div class="cart-items">
+
+                    <!-- show this when there are no items in div -->
+                    <div class="empty-cart">
+                        <img src="images/empty-cart.gif" alt="Empty Cart">
+                    </div>
                     
                     <!-- <div class="items">
                         <div class="cart-image">
@@ -165,8 +170,8 @@
                     <div>
                         <label> Total Price </label>
                     </div>
-                    <div class="total-cart-price">
-                        <label> Ksh. 1000 </label>
+                    <div class="total-cart-price" id="total-cart-price">
+                        <label> Ksh. 0 </label>
                     </div>
                 </div>
 
