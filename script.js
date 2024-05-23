@@ -44,7 +44,7 @@ function addDataToHtml(){
                 </div>
             </div>`
         })
-    }
+    } 
     mainDiv.innerHTML += html
 
 }
