@@ -17,6 +17,8 @@
     -blue-2: #0077b6;
     -blue-3: #0096c7;
     -blue-4: #00b4d8;
+    --success-green: #70e000;
+    --error-red:#d00000;
 }
 
 *{
@@ -29,6 +31,44 @@
 
 body{
     width: 100vw;
+    /* display: flex; */
+}
+.popup{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.alert{
+    /* display: flex; */
+    flex-direction: column;
+    line-height: 1.5rem;
+    /* border: 1px solid; */
+    margin: 0px auto;
+    align-items: center;
+    justify-content: center;
+    margin: .3rem;
+    display: none; /*-> completely removes it*/
+    /* visibility: hidden; -> hides but the div will still be there*/
+}
+
+.popup .alert label {
+    color: var(--almost-white);
+    font-weight: 700;
+}
+
+#success{
+    background-color: var(--success-green);
+    padding: .4rem;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+#error{
+    background-color: var(--error-red);
+    padding: .4rem;
+    border-radius: 10px;
+    visibility: hidden;
 }
 
 .container{
@@ -279,8 +319,8 @@ body{
 /* main-content sidebar */
 .content .sidebar-content{
     /* border: 1px solid; */
-    width: 34%;
-    padding: 1rem;
+    width: 40%;
+    padding: .4rem;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
@@ -296,19 +336,25 @@ body{
 }
 
 .content .sidebar-content .cart-items{
+    overflow: auto;
+    /* border: 1px solid; */
     display: flex;
     flex-direction: column;
     gap: .3rem;
+    margin: 0px auto;
+    width: 95%;
 }
 
 .content .sidebar-content .cart-items .items{
     display: inline-flex;
+    padding: .4rem;
     gap: .3rem;
+    border-radius: 10px;
     width: 100%;
     border: 1px solid;
     background-color: var(--light-grayish-blue-2);
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .cart-items .items .cart-image{

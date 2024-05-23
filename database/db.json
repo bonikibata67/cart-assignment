@@ -29,6 +29,30 @@
       "email": "blue@gmail.com",
       "username": "blue",
       "password": "qwerty12"
+    },
+    {
+      "id": "a871",
+      "email": "daagi210@gmail.com",
+      "username": "daagi",
+      "password": "qwerty12"
+    },
+    {
+      "id": "dac6",
+      "email": "mkuu@gmail.com",
+      "username": "mbugua",
+      "password": "qwerty12"
+    },
+    {
+      "id": "9256",
+      "email": "boni@gmail.com",
+      "username": "boni",
+      "password": "qwerty12"
+    },
+    {
+      "id": "c9bb",
+      "email": "boni@gmail.com",
+      "username": "boni",
+      "password": ""
     }
   ],
   "products": [
