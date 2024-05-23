@@ -1,7 +1,6 @@
 console.log('begin script execution')
 
 const productsURL = 'http://localhost:3000/products'
-const cartURL = 'http://localhost:3000/cart'
 
 
 const cartIcon = document.querySelector('#cart-icon')	//grab the cart menu icon
@@ -40,7 +39,7 @@ function addDataToHtml(){
                     <label> Ksh. ${product.price} </label>
                 </div>
                 <div>
-                    <button id="add-cart" onclick="addCartItems()" class="add-cart"> Add to Cart </button>
+                    <button id="add-cart" onclick="addCartItems('${product.id}')" class="add-cart"> Add to Cart </button>
                 </div>
             </div>`
         })
@@ -51,53 +50,78 @@ function addDataToHtml(){
 
 fetchData()
 
-// adding to cart
-let cart_items = []
+
+// store cart items in an array
+let cart = []; 
 
 function fetchCartItems(){
-    fetch(cartURL).then(response => response.json())
+    fetch(productsURL).then(response => response.json())
     .then(data => {
-        cart_items = data
-        console.log(cart_items)
+        products = data
+        console.log(products)
 
         addCartItems()
     })
 }
 
 
-function addCartItems(){
+
+// Add product to cart
+function addCartItems(productId) {
+    const product = products.find(item => item.id === productId);
+    if (product) {
+        cart.push(product); // Add product to cart array
+        updateCartUI(); // Update UI to reflect the changes in the cart
+    }
+}
+
+// Update the cart UI
+function updateCartUI() {
     let html = ''
 
-    if(cart_items.length > 0){
-        cart_items.forEach(cart_item => {
-            html += `
-            <div class="items">
-            <div class="cart-image">
-                <img src="${cart_item.image}" alt="cart-image">
-            </div>
-            <div class="cart-name">
-                <label> ${cart_item.title} </label>
-            </div>
-            <div class="cart-price">
-                <label> Ksh.${cart_item.price} </label>
-            </div>
-            <div class="quantity">
-                <span class="cart-minus" onclick="incrementVal"><i class='bx bx-message-square-add bx-xs'></i></span>
-                <span> 0 </span>
-                <span class="cart-minus" onclick="decrementVal"><i class='bx bx-message-square-minus bx-xs'></i></span>
-            </div>
-        </div>`
-        })
-    } else{
+    if (cart.length > 0){
+    cart.forEach(product => {
+        html += `
+        <div class="items">
+        <div class="cart-image">
+            <img src="${product.image}" alt="cart-image">
+        </div>
+        <div class="cart-name">
+            <label> ${product.title} </label>
+        </div>
+        <div class="cart-price">
+            <label> Ksh.${product.price} </label>
+        </div>
+        <div class="quantity">
+            <span class="cart-minus" onclick="incrementVal"><i class='bx bx-message-square-add bx-xs'></i></span>
+            <span> 0 </span>
+            <span class="cart-minus" onclick="decrementVal"><i class='bx bx-message-square-minus bx-xs'></i></span>
+        </div>
+    </div>`
+    })
+    } else {
         html += `<div>
                     <label> There are no items in your cart</label>
                 </div>`
     }
-    // console.log(cartItem.innerHtml += html)
-    cartItem.innerHTML += html
+    cartItem.innerHTML = html; // Clear the existing cart items
 }
 
 
+
+// Add event listener to document load to fetch data
+document.addEventListener('DOMContentLoaded', () => {
+    fetchData();
+});
+
+// Add event listener to the "Add to Cart" buttons
+mainDiv.addEventListener('click', (event) => {
+    if (event.target.classList.contains('add-cart')) {
+        const productId = event.target.dataset.productId;
+        addCartItems(productId);
+    }
+});
+
+
+
 fetchCartItems()
-
-

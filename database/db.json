@@ -88,21 +88,5 @@
       "description": "sth sth",
       "price": 1738
     }
-  ],
-  "cart":[
-    {
-      "id": "1",
-      "title": "Baseball Glove",
-      "image": "./images/baseball-glove-mizuno.jpg",
-      "description": "sth sth",
-      "price": 1738
-    },
-    {
-      "id": "2",
-      "title": "Baseball Hat",
-      "image": "./images/baseball-hat.jpg",
-      "description": "sth sth",
-      "price": 1738
-    }
   ]
 }
