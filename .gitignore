@@ -5,3 +5,6 @@ delete/
 #vscode settings
 .vscode/
 
+#ignore the json database
+*.json
+
