@@ -76,6 +76,11 @@ function addCartItems(productId) {
     }
 }
 
+function deleteCartItems(a){
+    cart.splice(a,1)
+    updateCartUI()
+}
+
 // Update the cart UI
 function updateCartUI() {
     let html = ''
@@ -104,7 +109,7 @@ function updateCartUI() {
             <span class="cart-plus" onclick="decrementVal"><i class='bx bx-message-square-add bx-xs'></i></span>
         </div>
         <div>
-            <i class='bx bxs-truck'></i>
+            <i class='bx bx-trash'></i>
         </div>
         </div>`
 
