@@ -57,15 +57,8 @@ body{
     font-weight: 700;
 }
 
-#success{
+#success-msg{
     background-color: var(--success-green);
-    padding: .4rem;
-    border-radius: 10px;
-    /* visibility: hidden; */
-}
-
-#error{
-    background-color: var(--error-red);
     padding: .4rem;
     border-radius: 10px;
     /* visibility: hidden; */
@@ -560,14 +553,36 @@ body{
 .form-group{
     font-size: 25px;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
 }
 
+.form-group.success .form-control{
+    border-color: #09c372;
+}
+
+.form-group.error .form-control{
+    border-color: #ff3860;
+}
+
+.form-group .error{
+    color: #ff3860;
+    font-weight: normal;
+    font-size: small;
+}
+
+.form-group .form-control:focus{
+    /* helps prevent overlap with error and succes outline */
+    outline: 0;
+}
 .form-wrapper .form-control{
+    border: 2px solid #665665;
+    padding: .4rem;
+    font-size: large;
 	border-radius: 17px;
-	height: 50px;
+	height: 40px;
 	font-weight: 500;
     width: 100%;
-	border: .1px solid;
 }
 .form-wrapper .remember-forgot{
 	display:flex;
@@ -578,7 +593,6 @@ body{
 .remember-forgot a{
 	text-decoration: none;
     color: var(--sky-blue);
-
 }
 
 .remember-forgot a:hover{
