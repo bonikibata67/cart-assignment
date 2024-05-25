@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Signup Page </title>    
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
 
@@ -25,17 +25,26 @@
 			<div class="form-group">
 				<label> Username: </label> <br/>
 				<input id="username" type="text" class="form-control" placeholder=" Enter Username">
+				<div class="error">
 			</div>
 
 			<div class="form-group">
                 <label> Email: </label> <br/>
                 <input id="email" type="email" class="form-control" placeholder=" Enter Email">
+				<div class="error">
 			</div>
 
 
 			<div class="form-group">
                 <label> Password: </label> <br/>
                 <input id="password" type="password" class="form-control" placeholder=" Enter Password">
+				<div class="error">
+			</div>
+
+			<div class="form-group">
+                <label> Confirm Password: </label> <br/>
+                <input id="confirm_password" type="password" class="form-control" placeholder=" Confirm Password">
+				<div class="error">
 			</div>
 
 
@@ -60,6 +69,6 @@
 
 	</form>    
 	<!-- <script src="script.js"> </script> -->
-	<script src="./src/signup.js"></script>
+	<script src="static/js/signup.js"></script>
 </body>
 </html>
