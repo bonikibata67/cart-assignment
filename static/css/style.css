@@ -112,13 +112,14 @@ body{
 }
 
 
-.top .middle .search-bar .form-control{
+.top .middle .search-bar{
     padding: .6rem;
     background-color: var(--light-grayish-blue-1);
     border-radius: 5px;
 
 }
-.top .middle .search-bar button{
+
+.top .middle button{
     /* padding: .5rem; */
     background-color: var(--sky-blue);
     color: var(--almost-white);
@@ -126,9 +127,10 @@ body{
     border: 1px solid var(--sky-blue);
     padding: .6rem 1.2rem;
     border-radius: 5px;
+    margin-left: .2rem;
 }
 
-.top .middle .search-bar button:hover{
+.top .middle button:hover{
     background-color: inherit;  /* form the main page*/
     border: 2px solid var(--sky-blue);
     color: var(--sky-blue);

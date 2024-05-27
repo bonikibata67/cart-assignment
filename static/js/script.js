@@ -9,11 +9,13 @@ const cartBtn = document.querySelector('#add-cart')  //add to cart
 let productHtml = document.querySelector('.card')   //adding html
 const cartItem = document.querySelector('.cart-items')
 const totalPrice = document.getElementById('total-cart-price')
+const searchBar = document.querySelector('.search-bar')
 
 
 //ADDING THE CART FUNCTIONALITY
 // handle the data
 let products = []
+let cart = []; 
 
 function fetchData(){
     fetch(productsURL).then(response => response.json())
@@ -24,6 +26,8 @@ function fetchData(){
         addDataToHtml()
     })
 }
+
+fetchData()
 
 function addDataToHtml(){
     let html = ''
@@ -49,37 +53,19 @@ function addDataToHtml(){
 
 }
 
-fetchData()
 
 
-// store cart items in an array
-let cart = []; 
 
 function fetchCartItems(){
     fetch(productsURL).then(response => response.json())
     .then(data => {
         products = data
-        console.log(products)
-
+        // console.log(products)
         addCartItems()
     })
 }
 
 
-
-// Add product to cart
-function addCartItems(productId) {
-    const product = products.find(item => item.id === productId);
-    if (product) {
-        cart.push(product); // Add product to cart array
-        updateCartUI(); // Update UI to reflect the changes in the cart
-    }
-}
-
-function deleteCartItems(a){
-    cart.splice(a,1)
-    updateCartUI()
-}
 
 // Update the cart UI
 function updateCartUI() {
@@ -127,11 +113,15 @@ function updateCartUI() {
 }
 
 
+// Add product to cart
+function addCartItems(productId) {
+    const product = products.find(item => item.id === productId);
+    if (product) {
+        cart.push(product); // Add product to cart array
+        updateCartUI(); // Update UI to reflect the changes in the cart
+    }
+}
 
-// Add event listener to document load to fetch data
-document.addEventListener('DOMContentLoaded', () => {
-    fetchData();
-});
 
 // Add event listener to the "Add to Cart" buttons
 mainDiv.addEventListener('click', (event) => {
@@ -142,5 +132,15 @@ mainDiv.addEventListener('click', (event) => {
 });
 
 
-
 fetchCartItems()
+
+// add the search bar functionality
+searchBar.addEventListener('keyup', (e)=>{
+    let searchVal = e.target.value.toLowerCase()
+
+    const filteredItems = products.filter( (product) => {
+        return (product.title.toLowerCase().includes(searchVal) ) //|| product.price.includes(searchVal))
+    })
+    console.log(filteredItems)
+    // addDataToHtml(filteredItems) //->not working
+})
