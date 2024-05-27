@@ -141,6 +141,28 @@ searchBar.addEventListener('keyup', (e)=>{
     const filteredItems = products.filter( (product) => {
         return (product.title.toLowerCase().includes(searchVal) ) //|| product.price.includes(searchVal))
     })
-    console.log(filteredItems)
-    // addDataToHtml(filteredItems) //->not working
+    // console.log(filteredItems)
+    renderProducts(filteredItems) //->not working
 })
+
+function renderProducts(filteredItems) {
+    let html = '';
+    filteredItems.forEach((product) => {
+        // let mainDiv = document.createElement('div');
+        // mainDiv.classList.add('item');
+        html += `
+        <div class="card">
+        <div class="image">
+            <img src=${product.image} alt="Image">
+        </div>
+            <p class="title"> ${product.title} </p>
+        <div class="price">
+            <label> Ksh. ${product.price}/= </label>
+        </div>
+        <div>
+            <button id="add-cart" onclick="addCartItems('${product.id}')" class="add-cart"> Add to Cart </button>
+        </div>
+    </div>`
+    mainDiv.innerHTML = html;
+    });
+}
